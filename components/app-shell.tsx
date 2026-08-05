@@ -1,5 +1,5 @@
 'use client'
-
+import { LogoutButton } from '@/components/auth/logout-button'
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -113,6 +113,7 @@ function SidebarFooter() {
         </span>
         <UserCog className="size-4 text-muted-foreground" />
       </Link>
+      <LogoutButton />
     </div>
   )
 }
