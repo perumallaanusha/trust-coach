@@ -30,7 +30,7 @@ export default function StudentLoginPage() {
         subheading="Sign in to your student workspace to pick up where you left off."
         redirectTo="/student"
         signupLabel="No student account yet?"
-        signupHref="/login/student"
+        signupHref="/signup/student"
       />
     </AuthLayout>
   )
