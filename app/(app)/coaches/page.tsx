@@ -1,5 +1,5 @@
 import { PageHeader } from '@/components/app-shell'
-import { CoachSearch } from '@/components/coach-search'
+import { LiveCoachSearch } from '@/components/live-coach-search'
 
 export const metadata = {
   title: 'Find a coach',
@@ -14,7 +14,7 @@ export default function CoachesPage() {
         title="Find a coach"
         description="Every coach here is identity-verified and every review is tied to a paid session. Filter by what you need to work on."
       />
-      <CoachSearch />
+      <LiveCoachSearch />
     </>
   )
 }
