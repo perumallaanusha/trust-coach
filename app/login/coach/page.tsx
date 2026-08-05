@@ -31,7 +31,7 @@ export default function CoachLoginPage() {
         subheading="Access your roster, calendar and earnings dashboard."
         redirectTo="/coach"
         signupLabel="Want to coach on TrustCoach?"
-        signupHref="/login/coach"
+        signupHref="/signup/coach"
       />
     </AuthLayout>
   )
