@@ -108,7 +108,7 @@ function SidebarFooter() {
             Priya Nair
           </span>
           <span className="block truncate text-xs text-muted-foreground">
-            Student · Trust 82
+            Student Â· Trust 82
           </span>
         </span>
         <UserCog className="size-4 text-muted-foreground" />
@@ -181,13 +181,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <Bell className="size-5" />
               <span className="absolute right-2 top-2 size-2 rounded-full bg-primary ring-2 ring-background" />
             </Link>
-            <Button
-              render={<Link href="/book" />}
+            <Button asChild
               className="hidden h-10 rounded-xl px-4 sm:inline-flex"
-            >
+            ><Link href="/book">
               <CalendarPlus className="size-4" />
               Book session
-            </Button>
+            </Link></Button>
             <Avatar className="size-9 lg:hidden">
               <AvatarImage src="/coaches/lena.png" alt="" />
               <AvatarFallback>PN</AvatarFallback>

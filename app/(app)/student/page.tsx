@@ -17,7 +17,7 @@ import { Card } from '@/components/ui/card'
 import { coaches, goals, sessions, weeklyProgress } from '@/lib/data'
 
 export const metadata: Metadata = {
-  title: 'Student dashboard — TrustCoach',
+  title: 'Student dashboard â€” TrustCoach',
 }
 
 export default function StudentDashboardPage() {
@@ -32,14 +32,13 @@ export default function StudentDashboardPage() {
       >
         <Button
           variant="outline"
-          className="h-10 rounded-xl px-4"
-          render={<Link href="/goals" />}
-        >
+          className="h-10 rounded-xl px-4" asChild
+        ><Link href="/goals">
           View goals
-        </Button>
-        <Button className="h-10 rounded-xl px-4" render={<Link href="/book" />}>
+        </Link></Button>
+        <Button className="h-10 rounded-xl px-4" asChild><Link href="/book">
           Book a session
-        </Button>
+        </Link></Button>
       </PageHeader>
 
       <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
@@ -85,12 +84,11 @@ export default function StudentDashboardPage() {
             </div>
             <Button
               variant="ghost"
-              className="h-9 rounded-xl px-3"
-              render={<Link href="/book" />}
-            >
+              className="h-9 rounded-xl px-3" asChild
+            ><Link href="/book">
               All
               <ArrowRight className="size-4" />
-            </Button>
+            </Link></Button>
           </div>
           <div className="mt-2 flex flex-col divide-y divide-border">
             {upcoming.map((session) => (
@@ -117,12 +115,11 @@ export default function StudentDashboardPage() {
             </p>
             <Button
               variant="outline"
-              className="mt-5 h-10 w-full rounded-xl"
-              render={<Link href="/trust-score" />}
-            >
+              className="mt-5 h-10 w-full rounded-xl" asChild
+            ><Link href="/trust-score">
               <ShieldCheck className="size-4" />
               See breakdown
-            </Button>
+            </Link></Button>
           </Card>
 
           <Card className="gap-0 rounded-2xl border-border/80 p-6">
@@ -175,12 +172,11 @@ export default function StudentDashboardPage() {
             </div>
             <Button
               variant="ghost"
-              className="h-9 rounded-xl px-3"
-              render={<Link href="/coaches" />}
-            >
+              className="h-9 rounded-xl px-3" asChild
+            ><Link href="/coaches">
               Search
               <ArrowRight className="size-4" />
-            </Button>
+            </Link></Button>
           </div>
           <div className="grid gap-5">
             {coaches.slice(0, 2).map((coach) => (

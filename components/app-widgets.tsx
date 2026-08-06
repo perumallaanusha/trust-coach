@@ -68,14 +68,14 @@ export function SessionRow({
       <div className="min-w-0 flex-1">
         <p className="truncate font-medium text-foreground">{session.topic}</p>
         <p className="mt-0.5 truncate text-sm text-muted-foreground">
-          {session.coach} · {session.mode}
+          {session.coach} Â· {session.mode}
         </p>
       </div>
       <div className="flex items-center gap-3 sm:flex-col sm:items-end sm:gap-1">
         <p className="text-sm font-medium text-foreground">{session.date}</p>
         <p className="flex items-center gap-1 text-xs text-muted-foreground">
           <Clock className="size-3.5" />
-          {session.time} · {session.duration}
+          {session.time} Â· {session.duration}
         </p>
       </div>
       <div className="flex items-center gap-2 sm:ml-4">
@@ -96,11 +96,10 @@ export function SessionRow({
         {action === 'review' && (
           <Button
             variant="outline"
-            className="h-9 rounded-xl px-3"
-            render={<Link href="/reviews" />}
-          >
+            className="h-9 rounded-xl px-3" asChild
+          ><Link href="/reviews">
             Review
-          </Button>
+          </Link></Button>
         )}
         {action === 'confirm' && (
           <Button className="h-9 rounded-xl px-3">Confirm</Button>

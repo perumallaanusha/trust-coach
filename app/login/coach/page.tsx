@@ -3,7 +3,7 @@ import { AuthLayout } from '@/components/auth/auth-layout'
 import { LoginForm } from '@/components/auth/login-form'
 
 export const metadata: Metadata = {
-  title: 'Coach login — TrustCoach',
+  title: 'Coach login \u2014 TrustCoach',
   description:
     'Sign in to manage your roster, availability, payouts and Trust Score.',
 }
@@ -12,7 +12,7 @@ export default function CoachLoginPage() {
   return (
     <AuthLayout
       panelTitle="Get paid for the reputation you earned."
-      panelBody="Manage availability, roster and payouts in one place — and let your Trust Score do the selling."
+      panelBody="Manage availability, roster and payouts in one place \u2014 and let your Trust Score do the selling."
       panelPoints={[
         'Verified badge after ID and credential checks',
         'Automatic payouts and invoicing per session',
@@ -29,7 +29,6 @@ export default function CoachLoginPage() {
         role="coach"
         heading="Coach sign in"
         subheading="Access your roster, calendar and earnings dashboard."
-        redirectTo="/coach"
         signupLabel="Want to coach on TrustCoach?"
         signupHref="/signup/coach"
       />

@@ -49,12 +49,11 @@ export function ForgotPasswordForm() {
         </p>
         <Button
           variant="outline"
-          className="mt-8 h-11 w-full rounded-xl"
-          render={<Link href="/login/student" />}
-        >
+          className="mt-8 h-11 w-full rounded-xl" asChild
+        ><Link href="/login/student">
           <ArrowLeft className="size-4" />
           Back to sign in
-        </Button>
+        </Link></Button>
       </div>
     )
   }

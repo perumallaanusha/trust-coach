@@ -197,11 +197,10 @@ export default function TrustScorePage() {
               ) : (
                 <Button
                   variant="outline"
-                  className="mt-auto h-9 rounded-xl"
-                  render={<Link href="/settings" />}
-                >
+                  className="mt-auto h-9 rounded-xl" asChild
+                ><Link href="/settings">
                   Complete check
-                </Button>
+                </Link></Button>
               )}
             </div>
           ))}

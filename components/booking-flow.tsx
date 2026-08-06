@@ -70,11 +70,10 @@ export function BookingFlow({ initialCoachId }: { initialCoachId?: string }) {
         </p>
         <div className="mt-6 flex w-full flex-col gap-2 sm:flex-row">
           <Button
-            className="h-11 flex-1 rounded-xl"
-            render={<Link href="/student" />}
-          >
+            className="h-11 flex-1 rounded-xl" asChild
+          ><Link href="/student">
             Go to dashboard
-          </Button>
+          </Link></Button>
           <Button
             variant="outline"
             className="h-11 flex-1 rounded-xl"
@@ -192,7 +191,7 @@ export function BookingFlow({ initialCoachId }: { initialCoachId?: string }) {
               Pick a date and time
             </h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              August 2026 · times shown in your local timezone (GMT+5:30)
+              August 2026 Â· times shown in your local timezone (GMT+5:30)
             </p>
 
             <div className="mt-5 grid grid-cols-4 gap-2 sm:grid-cols-7">
@@ -313,7 +312,7 @@ export function BookingFlow({ initialCoachId }: { initialCoachId?: string }) {
                 Payment method
               </p>
               <p className="mt-1 text-sm text-muted-foreground">
-                Visa ending 4242 · billed after the session is confirmed
+                Visa ending 4242 Â· billed after the session is confirmed
               </p>
             </div>
 
@@ -329,7 +328,7 @@ export function BookingFlow({ initialCoachId }: { initialCoachId?: string }) {
                 className="h-11 rounded-xl px-6"
                 onClick={() => setBooked(true)}
               >
-                Confirm booking · ${total}
+                Confirm booking Â· ${total}
               </Button>
             </div>
           </Card>

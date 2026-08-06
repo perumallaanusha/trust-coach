@@ -75,8 +75,8 @@ function CoachResultCard({ coach }: { coach: PublicCoach }) {
           <span className="font-display text-lg font-bold text-foreground">{formatMoney(coach.hourlyRateCents, coach.currency)}</span> / session
         </p>
         <div className="flex gap-2">
-          <Button variant="outline" className="h-9 rounded-xl px-3" render={<Link href={`/coaches/${coach.id}`} />}>Profile</Button>
-          <Button className="h-9 rounded-xl px-3" render={<Link href={`/book?coach=${coach.id}`} />}>Book</Button>
+          <Button variant="outline" className="h-9 rounded-xl px-3" asChild><Link href={`/coaches/${coach.id}`}>Profile</Link></Button>
+          <Button className="h-9 rounded-xl px-3" asChild><Link href={`/book?coach=${coach.id}`}>Book</Link></Button>
         </div>
       </div>
     </Card>
@@ -131,7 +131,7 @@ export function LiveCoachSearch() {
     setActiveSkills((current) => current.includes(skill) ? current.filter((value) => value !== skill) : [...current, skill])
   }
 
-  if (loading) return <Card className="rounded-2xl border-border/80 p-8 text-sm text-muted-foreground">Loading verified coaches…</Card>
+  if (loading) return <Card className="rounded-2xl border-border/80 p-8 text-sm text-muted-foreground">Loading verified coachesâ€¦</Card>
   if (loadError) return <Card className="rounded-2xl border-destructive/30 p-8 text-sm text-destructive">{loadError}</Card>
 
   return (
@@ -146,7 +146,7 @@ export function LiveCoachSearch() {
           <div className="relative"><Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" /><Input id="coach-search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Skill, name or topic" className="h-11 rounded-xl pl-9" /></div>
         </div>
         <div className="mt-6 flex flex-col gap-2">
-          <div className="flex items-center justify-between"><Label htmlFor="price">Max price per session</Label><span className="text-sm font-semibold text-foreground">₹{maxPrice.toLocaleString('en-IN')}</span></div>
+          <div className="flex items-center justify-between"><Label htmlFor="price">Max price per session</Label><span className="text-sm font-semibold text-foreground">â‚¹{maxPrice.toLocaleString('en-IN')}</span></div>
           <input id="price" type="range" min={500} max={priceCeiling / 100} step={100} value={maxPrice} onChange={(event) => setMaxPrice(Number(event.target.value))} className="h-2 w-full cursor-pointer appearance-none rounded-full bg-secondary accent-primary" />
         </div>
         <div className="mt-6 flex flex-col gap-2">

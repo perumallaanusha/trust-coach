@@ -36,17 +36,15 @@ export function SiteNav() {
         <div className="hidden items-center gap-2 md:flex">
           <Button
             variant="ghost"
-            className="h-10 rounded-xl px-4"
-            render={<Link href="/login/coach" />}
-          >
+            className="h-10 rounded-xl px-4" asChild
+          ><Link href="/login/coach">
             Coach login
-          </Button>
+          </Link></Button>
           <Button
-            className="h-10 rounded-xl px-4"
-            render={<Link href="/login/student" />}
-          >
+            className="h-10 rounded-xl px-4" asChild
+          ><Link href="/login/student">
             Student login
-          </Button>
+          </Link></Button>
         </div>
 
         <Button
@@ -77,17 +75,15 @@ export function SiteNav() {
           <div className="mt-3 flex flex-col gap-2">
             <Button
               variant="outline"
-              className="h-10 w-full rounded-xl"
-              render={<Link href="/login/coach" />}
-            >
+              className="h-10 w-full rounded-xl" asChild
+            ><Link href="/login/coach">
               Coach login
-            </Button>
+            </Link></Button>
             <Button
-              className="h-10 w-full rounded-xl"
-              render={<Link href="/login/student" />}
-            >
+              className="h-10 w-full rounded-xl" asChild
+            ><Link href="/login/student">
               Student login
-            </Button>
+            </Link></Button>
           </div>
         </div>
       )}

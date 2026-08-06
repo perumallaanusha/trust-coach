@@ -21,7 +21,7 @@ const features = [
   {
     icon: ShieldCheck,
     title: 'Trust Score on every profile',
-    body: 'A single 0–100 number built from verified identity, attendance history, review authenticity and dispute record.',
+    body: 'A single 0â€“100 number built from verified identity, attendance history, review authenticity and dispute record.',
   },
   {
     icon: Search,
@@ -54,7 +54,7 @@ const steps = [
   {
     step: 'Step 1',
     title: 'Tell us the outcome',
-    body: 'Pick your goal — portfolio, interviews, speaking — and the level you are starting from.',
+    body: 'Pick your goal â€” portfolio, interviews, speaking â€” and the level you are starting from.',
   },
   {
     step: 'Step 2',
@@ -117,12 +117,11 @@ export function HowItWorks() {
           </div>
           <Button
             variant="outline"
-            className="h-11 w-fit rounded-xl px-5"
-            render={<Link href="/coaches" />}
-          >
+            className="h-11 w-fit rounded-xl px-5" asChild
+          ><Link href="/coaches">
             Browse coaches
             <ArrowRight className="size-4" />
-          </Button>
+          </Link></Button>
         </div>
 
         <ol className="mt-12 grid gap-5 md:grid-cols-3">
@@ -177,12 +176,11 @@ export function TrustSection() {
             ))}
           </ul>
           <Button
-            className="mt-8 h-11 rounded-xl px-5"
-            render={<Link href="/trust-score" />}
-          >
+            className="mt-8 h-11 rounded-xl px-5" asChild
+          ><Link href="/trust-score">
             See a full breakdown
             <ArrowRight className="size-4" />
-          </Button>
+          </Link></Button>
         </div>
 
         <Card className="gap-0 rounded-3xl border-border/70 p-6 shadow-lg shadow-primary/5 md:p-8">
@@ -232,12 +230,11 @@ export function FeaturedCoaches() {
           </div>
           <Button
             variant="outline"
-            className="h-11 w-fit rounded-xl px-5"
-            render={<Link href="/coaches" />}
-          >
+            className="h-11 w-fit rounded-xl px-5" asChild
+          ><Link href="/coaches">
             Search all coaches
             <Search className="size-4" />
-          </Button>
+          </Link></Button>
         </div>
 
         <div className="mt-12 grid gap-5 md:grid-cols-2">
@@ -384,11 +381,10 @@ export function Pricing() {
               </ul>
               <Button
                 variant={plan.highlighted ? 'default' : 'outline'}
-                className="mt-8 h-11 w-full rounded-xl"
-                render={<Link href={plan.href} />}
-              >
+                className="mt-8 h-11 w-full rounded-xl" asChild
+              ><Link href={plan.href}>
                 {plan.cta}
-              </Button>
+              </Link></Button>
             </Card>
           ))}
         </div>
@@ -416,19 +412,17 @@ export function ClosingCta() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button
               variant="secondary"
-              className="h-12 rounded-xl px-6 text-base"
-              render={<Link href="/login/student" />}
-            >
+              className="h-12 rounded-xl px-6 text-base" asChild
+            ><Link href="/login/student">
               Get started free
               <ArrowRight className="size-4" />
-            </Button>
+            </Link></Button>
             <Button
               variant="ghost"
-              className="h-12 rounded-xl border border-primary-foreground/30 px-6 text-base text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
-              render={<Link href="/coach" />}
-            >
+              className="h-12 rounded-xl border border-primary-foreground/30 px-6 text-base text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" asChild
+            ><Link href="/coach">
               See the coach dashboard
-            </Button>
+            </Link></Button>
           </div>
         </div>
       </Card>
@@ -509,8 +503,8 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-4 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between md:px-6">
-          <p>© 2026 TrustCoach Labs. All rights reserved.</p>
-          <p>Privacy · Terms · Trust &amp; Safety</p>
+          <p>Â© 2026 TrustCoach Labs. All rights reserved.</p>
+          <p>Privacy Â· Terms Â· Trust &amp; Safety</p>
         </div>
       </div>
     </footer>

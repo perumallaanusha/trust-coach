@@ -76,17 +76,15 @@ export function CoachCard({ coach }: { coach: Coach }) {
         <div className="flex gap-2">
           <Button
             variant="outline"
-            className="h-9 rounded-xl px-3"
-            render={<Link href={`/coaches/${coach.id}`} />}
-          >
+            className="h-9 rounded-xl px-3" asChild
+          ><Link href={`/coaches/${coach.id}`}>
             Profile
-          </Button>
+          </Link></Button>
           <Button
-            className="h-9 rounded-xl px-3"
-            render={<Link href={`/book?coach=${coach.id}`} />}
-          >
+            className="h-9 rounded-xl px-3" asChild
+          ><Link href={`/book?coach=${coach.id}`}>
             Book
-          </Button>
+          </Link></Button>
         </div>
       </div>
     </Card>

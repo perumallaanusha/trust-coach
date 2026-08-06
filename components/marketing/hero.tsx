@@ -56,25 +56,23 @@ export function Hero() {
 
           <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
             TrustCoach scores every coach on identity, attendance and review
-            authenticity — then gives students booking, goals and progress
+            authenticity â€” then gives students booking, goals and progress
             tracking in one place.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button
-              className="h-12 rounded-xl px-6 text-base"
-              render={<Link href="/login/student" />}
-            >
+              className="h-12 rounded-xl px-6 text-base" asChild
+            ><Link href="/login/student">
               Find a coach
               <ArrowRight className="size-4" />
-            </Button>
+            </Link></Button>
             <Button
               variant="outline"
-              className="h-12 rounded-xl px-6 text-base"
-              render={<Link href="/login/coach" />}
-            >
+              className="h-12 rounded-xl px-6 text-base" asChild
+            ><Link href="/login/coach">
               Coach with us
-            </Button>
+            </Link></Button>
           </div>
 
           <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-border pt-6">
@@ -144,7 +142,7 @@ export function Hero() {
                   Session confirmed
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  Thu 13 Aug · 4:30 PM
+                  Thu 13 Aug Â· 4:30 PM
                 </p>
               </div>
             </div>

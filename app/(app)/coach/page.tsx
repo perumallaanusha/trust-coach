@@ -18,7 +18,7 @@ import { Card } from '@/components/ui/card'
 import { reviews, sessions, weeklyProgress } from '@/lib/data'
 
 export const metadata: Metadata = {
-  title: 'Coach dashboard — TrustCoach',
+  title: 'Coach dashboard â€” TrustCoach',
 }
 
 const roster = [
@@ -60,21 +60,19 @@ export default function CoachDashboardPage() {
     <div className="mx-auto w-full max-w-6xl">
       <PageHeader
         title="Coach workspace"
-        description="Aarav Mehta · Senior Product Design Coach. Three sessions scheduled this week and two review replies pending."
+        description="Aarav Mehta Â· Senior Product Design Coach. Three sessions scheduled this week and two review replies pending."
       >
         <Button
           variant="outline"
-          className="h-10 rounded-xl px-4"
-          render={<Link href="/settings" />}
-        >
+          className="h-10 rounded-xl px-4" asChild
+        ><Link href="/settings">
           Edit availability
-        </Button>
+        </Link></Button>
         <Button
-          className="h-10 rounded-xl px-4"
-          render={<Link href="/coaches/aarav-mehta" />}
-        >
+          className="h-10 rounded-xl px-4" asChild
+        ><Link href="/coaches/aarav-mehta">
           View public profile
-        </Button>
+        </Link></Button>
       </PageHeader>
 
       <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
@@ -166,12 +164,11 @@ export default function CoachDashboardPage() {
             </h2>
             <Button
               variant="ghost"
-              className="h-9 rounded-xl px-3"
-              render={<Link href="/book" />}
-            >
+              className="h-9 rounded-xl px-3" asChild
+            ><Link href="/book">
               Calendar
               <ArrowRight className="size-4" />
-            </Button>
+            </Link></Button>
           </div>
           <div className="mt-2 flex flex-col divide-y divide-border">
             {sessions.slice(0, 2).map((session) => (
@@ -195,11 +192,10 @@ export default function CoachDashboardPage() {
           </p>
           <Button
             variant="outline"
-            className="mt-5 h-10 w-full rounded-xl"
-            render={<Link href="/trust-score" />}
-          >
+            className="mt-5 h-10 w-full rounded-xl" asChild
+          ><Link href="/trust-score">
             Improve my score
-          </Button>
+          </Link></Button>
         </Card>
       </div>
 
@@ -223,7 +219,7 @@ export default function CoachDashboardPage() {
                     {student.name}
                   </p>
                   <p className="truncate text-xs text-muted-foreground">
-                    {student.focus} · next {student.next}
+                    {student.focus} Â· next {student.next}
                   </p>
                   <Meter
                     value={student.progress}
@@ -246,12 +242,11 @@ export default function CoachDashboardPage() {
             </h2>
             <Button
               variant="ghost"
-              className="h-9 rounded-xl px-3"
-              render={<Link href="/reviews" />}
-            >
+              className="h-9 rounded-xl px-3" asChild
+            ><Link href="/reviews">
               All
               <ArrowRight className="size-4" />
-            </Button>
+            </Link></Button>
           </div>
           <div className="mt-2 flex flex-col divide-y divide-border">
             {reviews.slice(0, 2).map((review) => (
@@ -267,12 +262,11 @@ export default function CoachDashboardPage() {
                 </p>
                 <Button
                   variant="outline"
-                  className="mt-3 h-9 rounded-xl px-3"
-                  render={<Link href="/reviews" />}
-                >
+                  className="mt-3 h-9 rounded-xl px-3" asChild
+                ><Link href="/reviews">
                   <MessageSquare className="size-4" />
                   Reply publicly
-                </Button>
+                </Link></Button>
               </div>
             ))}
           </div>

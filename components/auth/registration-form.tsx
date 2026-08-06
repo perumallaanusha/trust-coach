@@ -60,11 +60,10 @@ export function RegistrationForm({ role }: { role: 'student' | 'coach' }) {
           return here to sign in.
         </p>
         <Button
-          className="mt-8 h-11 w-full rounded-xl"
-          render={<Link href={role === 'student' ? '/login/student' : '/login/coach'} />}
-        >
+          className="mt-8 h-11 w-full rounded-xl" asChild
+        ><Link href={role === 'student' ? '/login/student' : '/login/coach'}>
           Back to sign in
-        </Button>
+        </Link></Button>
       </div>
     )
   }

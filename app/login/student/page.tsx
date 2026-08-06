@@ -3,7 +3,7 @@ import { AuthLayout } from '@/components/auth/auth-layout'
 import { LoginForm } from '@/components/auth/login-form'
 
 export const metadata: Metadata = {
-  title: 'Student login — TrustCoach',
+  title: 'Student login \u2014 TrustCoach',
   description: 'Sign in to book verified coaches and track your progress.',
 }
 
@@ -28,7 +28,6 @@ export default function StudentLoginPage() {
         role="student"
         heading="Welcome back"
         subheading="Sign in to your student workspace to pick up where you left off."
-        redirectTo="/student"
         signupLabel="No student account yet?"
         signupHref="/signup/student"
       />
